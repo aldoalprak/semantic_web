@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Diary of Murphy the Circus Player</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./lib/index"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+
+</head>
+<body>
+
+	<script>
+		$(document).ready(function(){
+    		$("button").click(function(){
+        		$("#imgCute1").fadeIn();
+        		$("#imgCute2").fadeIn(1500);
+        		$("#imgCute3").fadeIn(3000);
+        		$("#imgCute4").fadeIn(4500);
+    		});
+		});
+
+		$(document).ready(function(){
+		    $("#text-box").keyup(function(){
+		       let email = this.value
+			   let validateEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+			   let result = validateEmail.test(email)
+			   console.log(this.value)
+			   if(result == true) {
+			   		$("#text-box").css("border-color", "green")
+			   }else{
+			   		$("#text-box").css("border-color", "red")
+			   }
+		    });
+		});
+
+		function msg(){alert("Thankyou, your email has been received");}
+	</script>
+
+
+	<div class="header">
+		<h1>Diary of Murphy the Circus Player</h1>
+	</div>
+
+	<div class="topnav">
+		<a href="#profile">Profile</a>
+		<a href="#mypicture">My Pic</a>
+		<a href="#myskill">My Skill</a>
+	</div>
+
+	<div class="row">
+		<div class="leftcolumn">
+			<div class="box" id="profile">
+			<h2> Profile</h2>
+				<div class="Profile-img" style="height:100px;">
+					<img src="https://www.incimages.com/uploaded_files/image/970x450/getty_139889573_115000.jpg" width="500" height="300" alt="hamster-img">
+				</div>
+				<p>Hello my name is Murphy. I'm a professional circus player at the Greatest Showman Studio in Chicago. My role is just running in my wheel (like you see in my picture) to keep the electricity on during the show. By the way, I'm not alone to do my job, I have 5 members in my team. </p>
+			</div>
+
+			<div class="box" id="mypicture">
+			<h2> My Picture</h2>
+				<button id="mypic">click to see the cuteness overload</button>
+				<div id="imgCute" >
+					<br>
+					<img src="https://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-hamsters-1__880.jpg" width="150" height="100" id="imgCute1" alt="hamster-img">
+					
+					<img src="https://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-hamsters-12__880.jpg" width="150" height="100" id="imgCute2" alt="hamster-img">	
+
+					<img src="https://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-hamsters-2__880.jpg" width="150" height="100" id="imgCute3" alt="hamster-img">
+
+					<img src="https://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-hamsters-29__880.jpg" width="150" height="100" id="imgCute4" alt="hamster-img">	
+				</div>
+			</div>
+
+			<div class="box" id="myskill">
+			<h2> My Skill</h2>
+				<p>my skill is to run as fast as possible like the Flash. Here is my video running in my wheel</p>
+
+				<iframe width="420" height="345" src="https://www.youtube.com/embed/fd8vl5LJoM8">
+				</iframe>
+			</div>
+		</div>			
+		<div class="rightcolumn">
+	    <div class="box-email">
+	      <h2>Do you want to get tips and trick related to the circus show?</h2>
+	      <p>delivered to you weekly, straight to your inbox</p>
+	      <input type="text" placeholder="Enter you email address" id="text-box" required>
+	      <input type="submit" onclick="msg()">
+	    </div>
+	    
+	    <div class="box">
+	      <h3>Follow Me</h3>
+	      <button class="fa fa-instagram" id="instagram"><a href="https://www.instagram.com/the_pipsqueakery/?hl=en" target="_blank" >Instagram</a></button>  
+	    </div>
+	  </div>
+	</div>
+
+
+
+
+<div class="footer">
+  <p>made by murphy the circus player</p>
+</div>	
+
+</body>
+</html>	
